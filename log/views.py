@@ -23,6 +23,13 @@ def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('index'))
 
+def tickets(request):
+    return render(request, 'log/tickets.html')
+
+def newticket(request):
+    return render(request, 'log/newticket.html')
+    
+
 def register(request):
     registered = False
     if request.method == 'POST':

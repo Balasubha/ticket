@@ -1,0 +1,30 @@
+{% extends "log/base.html" %}
+{% block body_block %}
+{% load static %}
+<div class="columns is-left">
+    <div class="column is-4">
+
+    <p class="control has-icons-left has-icons-right">
+      <input class="input is-rounded" type="text" placeholder="Search Here">
+      <span class="icon is-small is-left">
+        
+      </span>
+      <span class="icon is-small is-right">
+        <i class="fas fa-search"></i>
+          
+    </span>
+    <div>
+        <br>
+        <img src="{% static 'plus.png' %}" height="20px" width="20px">
+        <a href="{%url 'log:newticket' %}"> New Ticket </a> 
+        <img src="{% static 'plus.png' %}"  height="20px" width="20px">
+        <a href="{%url 'log:newticket' %}"> CheckTicket </a>
+        
+</div>    
+</p>
+
+  </div>
+
+  
+
+{% endblock %}
