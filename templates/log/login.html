@@ -1,0 +1,61 @@
+{% extends 'log/base.html' %}
+{% block body_block %}
+<div class="columns is-centered">
+    <div class="column is-4">
+<style>
+  .button {
+   border-radius: 0;
+   border: none;
+  }.card-content.login {background-color: #fcfcfc;#f7f7f7;
+   border: none;
+   height: 300px;
+   width: 350px;
+   padding: 20px;
+  }
+  .card-footer-item.register {
+   background-color: #284863;
+   color: white;
+  }.input{border-width:2px;
+   border-radius:10px;
+  }.card-footer {border: none;
+  }
+  .label {
+   font-weight: lighter;
+  }
+  </style>
+  
+<div class="card">
+    <div class="card-content login">
+        <p class="title is-centered">Login</h2>
+        <br>    
+      
+      
+<form method="post" action="{% url 'log:user_login' %}">
+          {% csrf_token %}
+          {# A more "HTML" way of creating the login form#}
+          <div class="field">
+          <label for="username">Username:</label>
+          <div class="control">
+          <input class="input is-info" name="username" type="text" placeholder="Username">
+          <!--<input type="text" name="username" placeholder="Username">-->
+          </div>
+          </div>
+       
+          <div class="field">
+<label for="password">Password:</label>
+<div class="control">
+<input class="input is-info" name="password" type="password" placeholder="Password">
+</div>
+</div>
+<!--<input type="password" name="password" placeholder="Password">-->
+<!--<input type="submit" name="" value="Login">-->
+<div>  <br> </div>
+ 
+<button class="button is-link" name="">Login</button>
+
+</form>
+</div>
+  </div>
+</div>
+</div>  
+{% endblock %}
