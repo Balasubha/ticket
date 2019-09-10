@@ -13,7 +13,7 @@ from django.contrib.auth.decorators import login_required
 
 def index(request):
     return render(request, 'log/index.html')
-
+#create login
 @login_required
 def special(request):
     return HttpResponse("You are logged in")
